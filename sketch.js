@@ -5,6 +5,7 @@ let food;
 let playfield = 600;
 let slider;
 let snakeSpeed;
+let apple;
 
 // p5js Setup function - required
 function setup() {
@@ -17,6 +18,10 @@ function setup() {
   pickLocation();
 
   setDifficelt();
+
+  apple = loadImage(
+    "https://littledeep.com/wp-content/uploads/2019/04/littledeep_illustration_apple_style1.png"
+  );
 }
 
 // p5js Draw function - required
@@ -38,7 +43,7 @@ function draw() {
   s.show();
 
   fill(255, 0, 100);
-  rect(food.x, food.y, scl, scl);
+  image(apple, food.x, food.y, scl, scl);
 }
 
 // Pick a location for food to appear
@@ -78,7 +83,7 @@ function scoreboard() {
   text("Highscore: " + s.highscore, 450, 625);
 
   fill(255);
-  text("Speed: " + snakeSpeed, 240, 625);
+  text("Speed: " + snakeSpeed, 280, 625);
 }
 
 // CONTROLS function
@@ -178,6 +183,6 @@ function Snake() {
 
 function setDifficelt() {
   slider = createSlider(1, 20, 10);
-  slider.position(170, 608);
+  slider.position(150, 608);
   slider.style("width", "80px");
 }
