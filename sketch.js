@@ -5,6 +5,7 @@ let playfield = 600;
 let slider;
 let snakeSpeed;
 let apple;
+let sky;
 
 function setup() {
   createCanvas(playfield, 640);
@@ -20,6 +21,12 @@ function setup() {
   apple = loadImage(
     "https://raw.githubusercontent.com/day421/SnakeGame/main/apple.png"
   );
+
+  sky = loadImage(
+    "https://raw.githubusercontent.com/day421/SnakeGame/main/sky.png"
+  );
+
+  image(sky);
 }
 
 function draw() {
