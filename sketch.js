@@ -82,7 +82,7 @@ function scoreboard() {
   text("Highscore: " + s.highscore, 450, 625);
 
   fill(255);
-  text("Speed: " + snakeSpeed, 280, 625);
+  text("Speed: " + snakeSpeed, 290, 625);
 }
 
 function keyPressed() {
