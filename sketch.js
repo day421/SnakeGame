@@ -19,11 +19,11 @@ function setup() {
   setDifficelt();
 
   apple = loadImage(
-    "https://raw.githubusercontent.com/day421/SnakeGame/main/apple.png"
+    "https://raw.githubusercontent.com/day421/SnakeGame/main/image/apple.png"
   );
 
   sky = loadImage(
-    "https://raw.githubusercontent.com/day421/SnakeGame/main/sky.jpg"
+    "https://raw.githubusercontent.com/day421/SnakeGame/main/image/sky.jpg"
   );
 }
 
