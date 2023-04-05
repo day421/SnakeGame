@@ -23,10 +23,8 @@ function setup() {
   );
 
   sky = loadImage(
-    "https://raw.githubusercontent.com/day421/SnakeGame/main/sky.png"
+    "https://raw.githubusercontent.com/day421/SnakeGame/main/sky.jpg"
   );
-
-  image(sky);
 }
 
 function draw() {
@@ -34,7 +32,7 @@ function draw() {
 
   frameRate(snakeSpeed);
 
-  background(50);
+  background(sky);
 
   scoreboard();
 
