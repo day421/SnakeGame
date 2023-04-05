@@ -1,4 +1,3 @@
-//Delcare Global Variables
 let s;
 let scl = 20;
 let food;
@@ -7,7 +6,6 @@ let slider;
 let snakeSpeed;
 let apple;
 
-// p5js Setup function - required
 function setup() {
   createCanvas(playfield, 640);
 
@@ -20,11 +18,10 @@ function setup() {
   setDifficelt();
 
   apple = loadImage(
-    "https://littledeep.com/wp-content/uploads/2019/04/littledeep_illustration_apple_style1.png"
+    "https://raw.githubusercontent.com/day421/SnakeGame/main/apple.png"
   );
 }
 
-// p5js Draw function - required
 function draw() {
   snakeSpeed = round(slider.value() * (1 + s.score * 0.08), 3);
 
@@ -46,7 +43,6 @@ function draw() {
   image(apple, food.x, food.y, scl, scl);
 }
 
-// Pick a location for food to appear
 function pickLocation() {
   let cols = floor(playfield / scl);
   let rows = floor(playfield / scl);
@@ -55,7 +51,6 @@ function pickLocation() {
 
   food.mult(scl);
 
-  // Check the food isn't appearing inside the tail
   for (let i = 0; i < s.tail.length; i++) {
     let pos = s.tail[i];
 
@@ -67,7 +62,6 @@ function pickLocation() {
   }
 }
 
-// scoreboard
 function scoreboard() {
   fill(0);
   rect(0, 600, 600, 40);
@@ -86,7 +80,6 @@ function scoreboard() {
   text("Speed: " + snakeSpeed, 280, 625);
 }
 
-// CONTROLS function
 function keyPressed() {
   if (keyCode === UP_ARROW) s.dir(0, -1);
   else if (keyCode === DOWN_ARROW) s.dir(0, 1);
@@ -94,7 +87,6 @@ function keyPressed() {
   else if (keyCode === LEFT_ARROW) s.dir(-1, 0);
 }
 
-// SNAKE OBJECT
 function Snake() {
   this.x = 0;
   this.y = 0;
